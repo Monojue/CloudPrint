@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.monojue.jpedal.PrintDialogActivity">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" >
+
+
+        </WebView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<ProgressBar-->
+            <!--style="?android:attr/progressBarStyleHorizontal"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:id="@+id/progressBar"-->
+            <!--android:layout_margin="50dp"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="10dp" />-->
+        <!--<TextView-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_below="@+id/progressBar"-->
+            <!--android:text="Loading.... Please Wait."-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:layout_centerInParent="true"
+            app:SpinKit_Color="@color/colorAccent"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
